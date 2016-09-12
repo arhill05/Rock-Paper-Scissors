@@ -38,8 +38,34 @@ public class GameUtils {
 
 
         //TODO: Create some logic to evaluate winner.
-        
 
+      String result = GameUtils.TIES;
+      switch(playerSelectedChoice){
+        case R.id.btnRock:
+          if(computerSelectedChoice == R.id.btnPaper){
+            result =  GameUtils.LOSES_TO;
+          }
+          else if(computerSelectedChoice == R.id.btnScissors){
+            result =  GameUtils.BEATS;
+          }
+          break;
+        case R.id.btnScissors:
+          if(computerSelectedChoice == R.id.btnRock){
+            result =  GameUtils.LOSES_TO;
+          }
+          else if(computerSelectedChoice == R.id.btnPaper){
+            result =  GameUtils.BEATS;
+          }
+          break;
+        case R.id.btnPaper:
+          if(computerSelectedChoice == R.id.btnScissors){
+            result =  GameUtils.LOSES_TO;
+          }
+          else if(computerSelectedChoice == R.id.btnRock) {
+            result =  GameUtils.BEATS;
+          }
+          break;
+      }
 
         /*
         These are the constants that should be returned
@@ -47,7 +73,7 @@ public class GameUtils {
         GameUtils.TIES;
         GameUtils.LOSES_TO;
         */
-        return GameUtils.BEATS;
+      return result;
     }
 
     public static Integer convertButtonToImage(Integer buttonChoice) {
