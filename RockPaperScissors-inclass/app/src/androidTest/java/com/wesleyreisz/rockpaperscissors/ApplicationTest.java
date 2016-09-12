@@ -63,13 +63,26 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         TODO: Implement the following logic
     */
     public void testRock(){
-       assertTrue(false);
+
+      Integer player = R.id.btnRock;
+
+      Assert.assertEquals(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnScissors));
+      Assert.assertEquals(GameUtils.TIES,GameUtils.evaluateWinner(player, R.id.btnRock));
+      Assert.assertEquals(GameUtils.LOSES_TO,GameUtils.evaluateWinner(player,R.id.btnPaper));
+
+      Assert.assertNotSame(GameUtils.TIES, GameUtils.evaluateWinner(player, R.id.btnScissors));
     }
     /*
         TODO: Implement the following logic
     */
     public void testPaper(){
-        assertTrue(false);
+      Integer player = R.id.btnPaper;
+
+      Assert.assertEquals(GameUtils.BEATS,GameUtils.evaluateWinner(player,R.id.btnRock));
+      Assert.assertEquals(GameUtils.TIES,GameUtils.evaluateWinner(player, R.id.btnPaper));
+      Assert.assertEquals(GameUtils.LOSES_TO,GameUtils.evaluateWinner(player,R.id.btnScissors));
+
+      Assert.assertNotSame(GameUtils.TIES, GameUtils.evaluateWinner(player, R.id.btnRock));
     }
 
 }
