@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_margin="32dp"
+        android:src="@drawable/profilepic"/>
+    <LinearLayout android:layout_margin="16dp" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/name" android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTxt"
+        />
+    </LinearLayout>
+    <LinearLayout android:layout_margin="16dp" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/city" android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="City" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityTxt"
+            />
+
+    </LinearLayout>
+    <LinearLayout android:layout_margin="16dp" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/state" android:layout_height="wrap_content">
+
+        <TextView
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="State" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateTxt"
+            />
+    </LinearLayout>
+    <LinearLayout android:layout_margin="16dp" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/zip" android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="Zip" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zipTxt"
+            />
+
+    </LinearLayout>
+    <LinearLayout android:layout_margin="16dp" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/submit" android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Submit"
+            android:id="@+id/submitBtn"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
